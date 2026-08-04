@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Barograph — MERN Weather Forecast Application
+#MERN Weather Forecast Application
 
 A full-stack weather forecast app. Search any city and get real-time
 temperature, humidity, wind speed, "feels like" temperature, and
@@ -110,31 +110,5 @@ Returns the most recent searches, most recent first.
 ]
 ```
 
-## Notes on the implementation
 
-- **Security**: the OpenWeatherMap key lives only in `backend/.env` and
-  is never sent to the browser.
-- **Validation**: the frontend rejects empty/too-short/symbol-only city
-  names before calling the API; the backend re-validates independently
-  (never trust the client alone).
-- **Error handling**: distinguishes "city not found" (404), rate
-  limiting, upstream timeouts, and generic failures, and shows the
-  right message for each.
-- **Resilience**: if MongoDB is briefly unreachable, weather lookups
-  still work — history-saving fails silently in the background instead
-  of breaking the main feature.
-- **Rate limiting**: `express-rate-limit` caps the public endpoint at
-  30 requests/minute per IP.
-
-## Deployment tips
-
-- Deploy `backend/` to any Node host (Render, Railway, Fly.io, EC2...);
-  set the same environment variables there.
-- Deploy `frontend/` as a static build: `npm run build` in `frontend/`
-  produces a `dist/` folder you can host on Vercel, Netlify, or behind
-  the Express server itself.
-- Point `VITE_API_BASE_URL` at your deployed backend URL, and
-  `CLIENT_ORIGIN` (backend) at your deployed frontend URL.
-=======
-# WEBFORECAST-APP
 
