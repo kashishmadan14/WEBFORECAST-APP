@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #MERN Weather Forecast Application
 
 A full-stack weather forecast app. Search any city and get real-time
